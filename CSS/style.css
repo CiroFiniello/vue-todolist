@@ -21,6 +21,6 @@ section{
 label{
     padding-left: 2rem;
 }
-h1{
+h1, p{
     text-align: center;
 }
