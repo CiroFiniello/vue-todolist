@@ -7,7 +7,28 @@
     <title>vue-todolist</title>
 </head>
 <body>
-    
+    <div id="app">
+        <header></header>
+
+        <main>
+            <section class="todo-list-wrapper">
+                <ul class="todo-list">
+                    <li class="list-item" v-for="(item, index) in todoList" :key="index"
+                    :class="( item.done === true ) ? 'done' : '' " @click="toggleDone(index)">
+                        {{ item.content }}
+                    </li>
+                </ul>
+            </section>
+            <section class="input">
+                <div>
+                    <label for="new-todo-input"></label>
+                    <input type="text" id="new-todo-input" v-model="newTaskContent"
+                    @keyup.enter="addNewTask(newTaskContent)"
+                    >
+                </div>
+            </section>
+        </main>
+    </div>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>
