@@ -6,9 +6,14 @@
 ul{
     padding-left: 3rem;
 }
-ul li.done{
+ul li{
+    margin-right: 1rem;
+}
+ul li span.done{
     text-decoration: line-through;
+    margin-right: 1rem;
 }
 section{
     margin-bottom: 3rem;
+    
 }

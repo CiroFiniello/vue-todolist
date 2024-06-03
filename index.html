@@ -14,14 +14,19 @@
             <section class="todo-list-wrapper">
                 <ul class="todo-list">
                     <li class="list-item" v-for="(item, index) in todoList" :key="index"
-                    :class="( item.done === true ) ? 'done' : '' " @click="toggleDone(index)">
+                    >
+                    <span :class="( item.done === true ) ? 'done' : '' " 
+                        @click="toggleDone(index)">
                         {{ item.content }}
-                    </li>
+                    </span>
+                    <i>X</i>
+                </li>
+                    
                 </ul>
             </section>
             <section class="input">
                 <div>
-                    <label for="new-todo-input"></label>
+                    <label for="new-todo-input"> type me</label>
                     <input type="text" id="new-todo-input" v-model="newTaskContent"
                     @keyup.enter="addNewTask(newTaskContent)"
                     >

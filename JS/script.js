@@ -41,6 +41,9 @@ createApp({
         },
         clearNewTaskInput() {
             this.newTaskContent = '';
+        },
+        removeTask: function(taskIndex){
+            this.todolist.splice(taskIndex, 1);
         }
     }
 }).mount('#app');
