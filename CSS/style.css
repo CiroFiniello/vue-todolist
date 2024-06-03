@@ -8,6 +8,7 @@ ul{
 }
 ul li{
     margin-right: 1rem;
+    margin-left: 3rem;
 }
 ul li span.done{
     text-decoration: line-through;
@@ -16,4 +17,10 @@ ul li span.done{
 section{
     margin-bottom: 3rem;
     
+}
+label{
+    padding-left: 2rem;
+}
+h1{
+    text-align: center;
 }
